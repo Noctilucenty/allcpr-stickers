@@ -99,18 +99,23 @@ def main():
             shutil.copy(t, thumb_dir / f"{sid}.png")
 
             im = Image.open(g)
+            # read info off frame 0 first: iterating seeks to the last frame and
+            # its info dict no longer carries the transparency key
+            size, loop = im.size, im.info.get("loop")
+            transparent = im.info.get("transparency") is not None
             frames = sum(1 for _ in ImageSequence.Iterator(im))
             row = {
                 "id": sid, "caption": s[cfg["key"]],
+                "gif_bytes": g.stat().st_size,
                 "gif_kb": round(g.stat().st_size / 1000, 1),
                 "thumb_kb": round(t.stat().st_size / 1000, 1),
-                "size": f"{im.size[0]}x{im.size[1]}", "frames": frames,
-                "loop_forever": im.info.get("loop") == 0,
-                "transparent": im.info.get("transparency") is not None,
+                "size": f"{size[0]}x{size[1]}", "frames": frames,
+                "loop_forever": loop == 0, "transparent": transparent,
             }
             rows.append(row)
-            if (row["gif_kb"] > 100 or row["thumb_kb"] > 60 or row["size"] != "240x240"
-                    or not row["loop_forever"] or row["frames"] < 2 or not row["transparent"]):
+            if (row["gif_bytes"] > 100_000 or t.stat().st_size > 60_000
+                    or row["size"] != "240x240" or not row["loop_forever"]
+                    or row["frames"] < 2 or not row["transparent"]):
                 problems.append(f"{lang}/{sid}: {row}")
 
         banner = build_banner(lang, cfg, OUT / lang / f"03_banner_750x400_{lang}.png")

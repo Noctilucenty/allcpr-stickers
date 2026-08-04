@@ -1,151 +1,545 @@
 {
   "pack": "ALLCPR 安安",
-  "stickers": [
-    {
-      "id": "01",
-      "caption": "收到",
-      "gif_kb": 97.6,
-      "thumb_kb": 34.0,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
+  "languages": {
+    "zh": {
+      "stickers": [
+        {
+          "id": "01",
+          "caption": "收到",
+          "gif_bytes": 83280,
+          "gif_kb": 83.3,
+          "thumb_kb": 37.6,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "02",
+          "caption": "我来",
+          "gif_bytes": 91491,
+          "gif_kb": 91.5,
+          "thumb_kb": 43.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "03",
+          "caption": "别慌",
+          "gif_bytes": 83064,
+          "gif_kb": 83.1,
+          "thumb_kb": 38.2,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "04",
+          "caption": "快打911",
+          "gif_bytes": 94948,
+          "gif_kb": 94.9,
+          "thumb_kb": 43.7,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "05",
+          "caption": "用力按压",
+          "gif_bytes": 98252,
+          "gif_kb": 98.3,
+          "thumb_kb": 47.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "06",
+          "caption": "学会啦",
+          "gif_bytes": 96729,
+          "gif_kb": 96.7,
+          "thumb_kb": 44.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "07",
+          "caption": "拿证啦",
+          "gif_bytes": 91843,
+          "gif_kb": 91.8,
+          "thumb_kb": 42.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "08",
+          "caption": "开课啦",
+          "gif_bytes": 93469,
+          "gif_kb": 93.5,
+          "thumb_kb": 44.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "09",
+          "caption": "加油",
+          "gif_bytes": 91522,
+          "gif_kb": 91.5,
+          "thumb_kb": 42.6,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "10",
+          "caption": "棒棒哒",
+          "gif_bytes": 80129,
+          "gif_kb": 80.1,
+          "thumb_kb": 53.7,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "11",
+          "caption": "点赞",
+          "gif_bytes": 85048,
+          "gif_kb": 85.0,
+          "thumb_kb": 39.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "12",
+          "caption": "比心",
+          "gif_bytes": 89754,
+          "gif_kb": 89.8,
+          "thumb_kb": 41.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "13",
+          "caption": "谢谢",
+          "gif_bytes": 96135,
+          "gif_kb": 96.1,
+          "thumb_kb": 44.6,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "14",
+          "caption": "辛苦了",
+          "gif_bytes": 99648,
+          "gif_kb": 99.6,
+          "thumb_kb": 39.6,
+          "size": "240x240",
+          "frames": 13,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "15",
+          "caption": "救命啊",
+          "gif_bytes": 99144,
+          "gif_kb": 99.1,
+          "thumb_kb": 47.2,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "16",
+          "caption": "生日快乐",
+          "gif_bytes": 80961,
+          "gif_kb": 81.0,
+          "thumb_kb": 47.4,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "17",
+          "caption": "安全第一",
+          "gif_bytes": 98374,
+          "gif_kb": 98.4,
+          "thumb_kb": 44.8,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "18",
+          "caption": "没问题",
+          "gif_bytes": 92074,
+          "gif_kb": 92.1,
+          "thumb_kb": 41.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "19",
+          "caption": "稍等",
+          "gif_bytes": 92599,
+          "gif_kb": 92.6,
+          "thumb_kb": 42.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "20",
+          "caption": "满员啦",
+          "gif_bytes": 95513,
+          "gif_kb": 95.5,
+          "thumb_kb": 47.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "21",
+          "caption": "早上好",
+          "gif_bytes": 97224,
+          "gif_kb": 97.2,
+          "thumb_kb": 43.5,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "22",
+          "caption": "晚安",
+          "gif_bytes": 87641,
+          "gif_kb": 87.6,
+          "thumb_kb": 40.2,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "23",
+          "caption": "恭喜恭喜",
+          "gif_bytes": 96295,
+          "gif_kb": 96.3,
+          "thumb_kb": 50.9,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "24",
+          "caption": "我在",
+          "gif_bytes": 89560,
+          "gif_kb": 89.6,
+          "thumb_kb": 37.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        }
+      ],
+      "banner_bytes": 48166,
+      "preview_bytes": 714502
     },
-    {
-      "id": "02",
-      "caption": "我来",
-      "gif_kb": 91.6,
-      "thumb_kb": 38.8,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
-    },
-    {
-      "id": "03",
-      "caption": "别慌",
-      "gif_kb": 97.3,
-      "thumb_kb": 34.3,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "04",
-      "caption": "快打911",
-      "gif_kb": 93.6,
-      "thumb_kb": 38.7,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "05",
-      "caption": "用力按压",
-      "gif_kb": 96.4,
-      "thumb_kb": 42.0,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
-    },
-    {
-      "id": "06",
-      "caption": "学会啦",
-      "gif_kb": 99.4,
-      "thumb_kb": 39.5,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
-    },
-    {
-      "id": "07",
-      "caption": "拿证啦",
-      "gif_kb": 98.3,
-      "thumb_kb": 37.1,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "08",
-      "caption": "开课啦",
-      "gif_kb": 94.2,
-      "thumb_kb": 39.8,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
-    },
-    {
-      "id": "09",
-      "caption": "加油",
-      "gif_kb": 99.4,
-      "thumb_kb": 38.2,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "10",
-      "caption": "棒棒哒",
-      "gif_kb": 76.5,
-      "thumb_kb": 46.1,
-      "size": "240x240",
-      "frames": 10,
-      "loop_forever": true
-    },
-    {
-      "id": "11",
-      "caption": "点赞",
-      "gif_kb": 90.3,
-      "thumb_kb": 35.2,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "12",
-      "caption": "比心",
-      "gif_kb": 92.5,
-      "thumb_kb": 36.5,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "13",
-      "caption": "谢谢",
-      "gif_kb": 98.3,
-      "thumb_kb": 37.4,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "14",
-      "caption": "辛苦了",
-      "gif_kb": 91.7,
-      "thumb_kb": 35.2,
-      "size": "240x240",
-      "frames": 15,
-      "loop_forever": true
-    },
-    {
-      "id": "15",
-      "caption": "救命啊",
-      "gif_kb": 96.2,
-      "thumb_kb": 42.0,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
-    },
-    {
-      "id": "16",
-      "caption": "生日快乐",
-      "gif_kb": 93.9,
-      "thumb_kb": 42.0,
-      "size": "240x240",
-      "frames": 13,
-      "loop_forever": true
+    "en": {
+      "stickers": [
+        {
+          "id": "01",
+          "caption": "Got it",
+          "gif_bytes": 83649,
+          "gif_kb": 83.6,
+          "thumb_kb": 39.0,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "02",
+          "caption": "I'm on it",
+          "gif_bytes": 96507,
+          "gif_kb": 96.5,
+          "thumb_kb": 43.7,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "03",
+          "caption": "Stay calm",
+          "gif_bytes": 92474,
+          "gif_kb": 92.5,
+          "thumb_kb": 43.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "04",
+          "caption": "Call 911",
+          "gif_bytes": 90403,
+          "gif_kb": 90.4,
+          "thumb_kb": 41.5,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "05",
+          "caption": "Push hard",
+          "gif_bytes": 95987,
+          "gif_kb": 96.0,
+          "thumb_kb": 45.7,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "06",
+          "caption": "Now I know",
+          "gif_bytes": 81412,
+          "gif_kb": 81.4,
+          "thumb_kb": 41.8,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "07",
+          "caption": "Certified!",
+          "gif_bytes": 97668,
+          "gif_kb": 97.7,
+          "thumb_kb": 44.0,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "08",
+          "caption": "Class time",
+          "gif_bytes": 97895,
+          "gif_kb": 97.9,
+          "thumb_kb": 46.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "09",
+          "caption": "You got this",
+          "gif_bytes": 99950,
+          "gif_kb": 100.0,
+          "thumb_kb": 47.9,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "10",
+          "caption": "Awesome",
+          "gif_bytes": 84261,
+          "gif_kb": 84.3,
+          "thumb_kb": 54.5,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "11",
+          "caption": "Nice one",
+          "gif_bytes": 93957,
+          "gif_kb": 94.0,
+          "thumb_kb": 41.9,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "12",
+          "caption": "Love it",
+          "gif_bytes": 91418,
+          "gif_kb": 91.4,
+          "thumb_kb": 42.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "13",
+          "caption": "Thank you",
+          "gif_bytes": 99016,
+          "gif_kb": 99.0,
+          "thumb_kb": 47.5,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "14",
+          "caption": "Great work",
+          "gif_bytes": 99640,
+          "gif_kb": 99.6,
+          "thumb_kb": 43.9,
+          "size": "240x240",
+          "frames": 13,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "15",
+          "caption": "Help!",
+          "gif_bytes": 91263,
+          "gif_kb": 91.3,
+          "thumb_kb": 43.2,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "16",
+          "caption": "Happy Birthday",
+          "gif_bytes": 82060,
+          "gif_kb": 82.1,
+          "thumb_kb": 46.5,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "17",
+          "caption": "Safety first",
+          "gif_bytes": 80823,
+          "gif_kb": 80.8,
+          "thumb_kb": 47.2,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "18",
+          "caption": "No problem",
+          "gif_bytes": 97429,
+          "gif_kb": 97.4,
+          "thumb_kb": 41.8,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "19",
+          "caption": "One sec",
+          "gif_bytes": 97400,
+          "gif_kb": 97.4,
+          "thumb_kb": 45.1,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "20",
+          "caption": "All full",
+          "gif_bytes": 94882,
+          "gif_kb": 94.9,
+          "thumb_kb": 42.6,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "21",
+          "caption": "Good morning",
+          "gif_bytes": 93241,
+          "gif_kb": 93.2,
+          "thumb_kb": 45.3,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "22",
+          "caption": "Good night",
+          "gif_bytes": 95430,
+          "gif_kb": 95.4,
+          "thumb_kb": 45.4,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "23",
+          "caption": "Congrats!",
+          "gif_bytes": 97955,
+          "gif_kb": 98.0,
+          "thumb_kb": 55.7,
+          "size": "240x240",
+          "frames": 8,
+          "loop_forever": true,
+          "transparent": true
+        },
+        {
+          "id": "24",
+          "caption": "I'm here",
+          "gif_bytes": 95610,
+          "gif_kb": 95.6,
+          "thumb_kb": 37.8,
+          "size": "240x240",
+          "frames": 10,
+          "loop_forever": true,
+          "transparent": true
+        }
+      ],
+      "banner_bytes": 46159,
+      "preview_bytes": 725651
     }
-  ],
-  "banner_bytes": 51359,
-  "preview_bytes": 473711
+  }
 }
