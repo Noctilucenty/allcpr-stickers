@@ -129,7 +129,7 @@ HTML = f"""<!doctype html>
 
   header {{
     display:flex; align-items:center; gap:20px; flex-wrap:wrap;
-    padding:32px 0 26px; border-bottom:1px solid var(--line);
+    padding:26px 0 24px; border-bottom:1px solid var(--line);
   }}
   .hero {{
     width:104px; height:104px; flex:none; border-radius:20px; background:var(--chat);
@@ -141,13 +141,37 @@ HTML = f"""<!doctype html>
   h1 .en {{ color:var(--blue); }}
   .sub {{ margin:6px 0 0; color:var(--muted); font-size:15px; }}
 
-  .langtog {{ display:flex; gap:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; flex:none; }}
+  /* Sticky, full-bleed, and the first thing on the page - people were missing a
+     chip tucked into the header. */
+  .langbar {{
+    position:sticky; top:0; z-index:20;
+    background:var(--paper); border-bottom:1px solid var(--line);
+  }}
+  .langbar-inner {{
+    max-width:1000px; margin:0 auto; padding:10px 20px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }}
+  .langlabel {{
+    font-size:12px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--muted);
+  }}
+  .langtog {{
+    display:flex; gap:0; border:2px solid var(--blue); border-radius:12px;
+    overflow:hidden; flex:none; background:var(--paper);
+  }}
   .langtog button {{
-    font:inherit; font-size:14px; font-weight:700; padding:8px 16px; cursor:pointer;
-    border:0; background:transparent; color:var(--muted);
+    font:inherit; font-size:15px; font-weight:800; padding:9px 24px; min-height:44px;
+    cursor:pointer; border:0; background:transparent; color:var(--blue-ink);
+    transition:background .15s ease, color .15s ease;
   }}
   .langtog button[aria-pressed="true"] {{ background:var(--blue); color:#fff; }}
+  .langtog button[aria-pressed="false"]:hover {{ background:var(--wash); }}
   .langtog button:focus-visible {{ outline:3px solid var(--blue-ink); outline-offset:-3px; }}
+  @media (max-width:520px) {{
+    .langbar-inner {{ gap:10px; }}
+    .langtog {{ flex:1 1 100%; }}
+    .langtog button {{ flex:1; padding:9px 12px; }}
+  }}
 
   .lede {{ margin:24px 0 0; max-width:62ch; color:var(--muted); }}
   .lede strong {{ color:var(--ink); font-weight:600; }}
@@ -231,6 +255,16 @@ HTML = f"""<!doctype html>
 </style>
 </head>
 <body data-lang="zh">
+<div class="langbar">
+  <div class="langbar-inner">
+    <span class="langlabel">语言 · Language</span>
+    <div class="langtog" role="group" aria-label="语言 / Language">
+      <button type="button" data-set="zh" aria-pressed="true">中文</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
   <header>
     <div class="hero"><img src="stickers/zh/12.gif" alt="安安 / An An" width="240" height="240"></div>
@@ -238,10 +272,6 @@ HTML = f"""<!doctype html>
       <h1><span class="en">ALLCPR</span> <span lang="zh">安安</span><span lang="en">An An</span></h1>
       <p class="sub" lang="zh">微信表情包 · 24 枚 · 会动的 GIF · 中英双版</p>
       <p class="sub" lang="en">WeChat sticker pack · 24 animated stickers · Chinese and English</p>
-    </div>
-    <div class="langtog" role="group" aria-label="Language">
-      <button type="button" data-set="zh" aria-pressed="true">中文</button>
-      <button type="button" data-set="en" aria-pressed="false">English</button>
     </div>
   </header>
 
