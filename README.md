@@ -1,5 +1,7 @@
 # ALLCPR 安安 — 微信表情包
 
+**Live: https://allcpr-stickers.onrender.com**
+
 A 16-sticker animated WeChat sticker pack for ALLCPR, built the same way the TEEC
 pack works: one chibi mascot, one costume, one caption per sticker.
 
@@ -43,6 +45,41 @@ generic cute pack — they are the actual chain of survival, played for laughs.
 
 Every file was checked against the spec programmatically; `package.py` reports
 `spec violations: 0`.
+
+## Why there is no one-tap "add all"
+
+WeChat only offers one-tap install of a whole pack for stickers published in its
+own 表情商店. There is no supported way to bulk-install stickers into the sticker
+tray from a web page, a zip, or a file of any kind — WeChat has no import format
+the way Telegram and LINE do. Anything claiming otherwise is either a screen
+recording of the manual flow or a repackaged store link.
+
+So there are exactly two routes:
+
+- **Now** — people save each GIF and add it from a chat. The site walks them
+  through it; roughly ten seconds a sticker, two minutes for all sixteen.
+- **One tap** — submit the pack to the 表情开放平台 and get it published. After
+  approval it appears in the sticker store and installs in a single tap, and the
+  store gives you a share link and QR that install the whole pack directly.
+
+The assets for that submission are already built and spec-compliant, so the
+remaining work is account registration, the IP declaration, and review.
+
+## Hosting
+
+The public page is a Render static site, deployed from this repo:
+
+| | |
+|---|---|
+| URL | https://allcpr-stickers.onrender.com |
+| Service | `srv-d9p5v8r7uimc73al6gig` (static site, workspace "My Workspace") |
+| Repo | `Noctilucenty/allcpr-stickers`, branch `master` |
+| Publish path | `site/` |
+| Auto-deploy | on every push to `master` |
+
+`build_site.py` regenerates `site/` — the page, the 16 GIFs, the zip, and the QR
+code. Push and Render redeploys itself. The Render API key lives in `.env`, which
+is gitignored; it is not in this repo.
 
 ## Submitting to WeChat
 

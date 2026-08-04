@@ -37,6 +37,13 @@ logo.save(SITE / "assets" / "allcpr-logo.png", optimize=True)
 
 shutil.copy(DELIV / "03_详情页横幅_banner_750x400.png", SITE / "assets" / "banner.png")
 
+# QR code - how a link actually gets passed around in a WeChat group.
+# Black on white at high error correction so it survives a phone screenshot.
+SITE_URL = "https://allcpr-stickers.onrender.com"
+import segno
+segno.make(SITE_URL, error="h").save(
+    SITE / "assets" / "qr.png", scale=9, border=2, dark="#0F2230", light="#FFFFFF")
+
 # one zip holding everything a submitter or a user would want
 zip_path = SITE / "allcpr-anan-stickers.zip"
 with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
@@ -160,6 +167,20 @@ HTML = f"""<!doctype html>
     border:1px solid var(--line); border-radius:6px; padding:1px 7px; white-space:nowrap;
   }}
 
+  .share {{
+    margin-top:28px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+    background:var(--wash); border:1px solid var(--line); border-radius:14px; padding:20px 22px;
+  }}
+  .share img {{ width:118px; height:118px; flex:none; border-radius:10px; background:#fff; padding:6px; }}
+  .share div {{ flex:1 1 220px; min-width:0; }}
+  .share h3 {{ margin:0 0 6px; font-size:16px; font-weight:800; }}
+  .share p {{ margin:0; font-size:14px; color:var(--muted); }}
+  .share code {{
+    display:inline-block; margin-top:8px; font-size:13px; word-break:break-all;
+    background:#fff; color:#0F2230; border:1px solid var(--line);
+    border-radius:6px; padding:3px 9px;
+  }}
+
   .grid {{ margin-top:20px; display:grid; gap:16px; grid-template-columns:repeat(4,1fr); }}
   @media (max-width:860px) {{ .grid {{ grid-template-columns:repeat(3,1fr); }} }}
   @media (max-width:600px) {{ .grid {{ grid-template-columns:repeat(2,1fr); }} }}
@@ -230,6 +251,15 @@ HTML = f"""<!doctype html>
         <li><span>在微信里把 GIF 发到<kbd>文件传输助手</kbd></span></li>
         <li><span>右键点这张表情，选<kbd>添加到表情</kbd></span></li>
       </ol>
+    </div>
+  </div>
+
+  <div class="share">
+    <img src="assets/qr.png" alt="扫码打开本页" width="118" height="118">
+    <div>
+      <h3>发到群里</h3>
+      <p>扫这个码，或者直接把下面这条链接发到微信群，同事自己就能下。</p>
+      <code>{SITE_URL}</code>
     </div>
   </div>
 
