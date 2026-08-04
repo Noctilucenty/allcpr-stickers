@@ -1,0 +1,151 @@
+{
+  "pack": "ALLCPR 安安",
+  "stickers": [
+    {
+      "id": "01",
+      "caption": "收到",
+      "gif_kb": 97.6,
+      "thumb_kb": 34.0,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "02",
+      "caption": "我来",
+      "gif_kb": 91.6,
+      "thumb_kb": 38.8,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    },
+    {
+      "id": "03",
+      "caption": "别慌",
+      "gif_kb": 97.3,
+      "thumb_kb": 34.3,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "04",
+      "caption": "快打911",
+      "gif_kb": 93.6,
+      "thumb_kb": 38.7,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "05",
+      "caption": "用力按压",
+      "gif_kb": 96.4,
+      "thumb_kb": 42.0,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    },
+    {
+      "id": "06",
+      "caption": "学会啦",
+      "gif_kb": 99.4,
+      "thumb_kb": 39.5,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    },
+    {
+      "id": "07",
+      "caption": "拿证啦",
+      "gif_kb": 98.3,
+      "thumb_kb": 37.1,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "08",
+      "caption": "开课啦",
+      "gif_kb": 94.2,
+      "thumb_kb": 39.8,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    },
+    {
+      "id": "09",
+      "caption": "加油",
+      "gif_kb": 99.4,
+      "thumb_kb": 38.2,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "10",
+      "caption": "棒棒哒",
+      "gif_kb": 76.5,
+      "thumb_kb": 46.1,
+      "size": "240x240",
+      "frames": 10,
+      "loop_forever": true
+    },
+    {
+      "id": "11",
+      "caption": "点赞",
+      "gif_kb": 90.3,
+      "thumb_kb": 35.2,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "12",
+      "caption": "比心",
+      "gif_kb": 92.5,
+      "thumb_kb": 36.5,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "13",
+      "caption": "谢谢",
+      "gif_kb": 98.3,
+      "thumb_kb": 37.4,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "14",
+      "caption": "辛苦了",
+      "gif_kb": 91.7,
+      "thumb_kb": 35.2,
+      "size": "240x240",
+      "frames": 15,
+      "loop_forever": true
+    },
+    {
+      "id": "15",
+      "caption": "救命啊",
+      "gif_kb": 96.2,
+      "thumb_kb": 42.0,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    },
+    {
+      "id": "16",
+      "caption": "生日快乐",
+      "gif_kb": 93.9,
+      "thumb_kb": 42.0,
+      "size": "240x240",
+      "frames": 13,
+      "loop_forever": true
+    }
+  ],
+  "banner_bytes": 51359,
+  "preview_bytes": 473711
+}

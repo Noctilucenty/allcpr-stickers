@@ -1,0 +1,15 @@
+# Render Blueprint - static hosting for the ALLCPR sticker download page.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: allcpr-stickers
+    runtime: static
+    buildCommand: "echo 'static site - no build step'"
+    staticPublishPath: ./site
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /stickers/*
+        name: Cache-Control
+        value: public, max-age=604800

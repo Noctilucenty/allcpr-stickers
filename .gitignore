@@ -1,0 +1,12 @@
+# secrets - never commit
+.env
+
+# large intermediates, regenerate with the build scripts
+01_sheet/
+02_poses/
+03_video/
+04_frames/
+05_gif/
+00_ref/_logo_small.png
+.DS_Store
+06_deliverable/download-page.html

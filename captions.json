@@ -1,0 +1,34 @@
+{
+  "pack": "ALLCPR 安安",
+  "brand": {
+    "name": "ALLCPR",
+    "blue": "#00A0E9",
+    "red": "#E30613",
+    "tagline_en": "All of us should learn CPR",
+    "site": "allcpr.org"
+  },
+  "spec": {
+    "sticker_px": 240,
+    "max_bytes": 500000,
+    "count": 16,
+    "note": "WeChat 表情开放平台 requires 16 or 24 stickers per set; main image 240x240 GIF."
+  },
+  "stickers": [
+    { "id": "01", "caption": "收到",     "pose": "crisp little salute, one hand at the brow, confident grin" },
+    { "id": "02", "caption": "我来",     "pose": "rolling up a sleeve, leaning forward, ready to jump in" },
+    { "id": "03", "caption": "别慌",     "pose": "calm reassuring smile, one palm raised in a steady stop gesture" },
+    { "id": "04", "caption": "快打911",  "pose": "urgently pointing at a cartoon smartphone held up in the other hand" },
+    { "id": "05", "caption": "用力按压", "pose": "kneeling beside a CPR training manikin torso, both hands stacked on its chest, determined face" },
+    { "id": "06", "caption": "学会啦",   "pose": "eyes wide with a lightbulb popping above the head, one finger raised" },
+    { "id": "07", "caption": "拿证啦",   "pose": "holding a certification card overhead with both hands, sparkles around" },
+    { "id": "08", "caption": "开课啦",   "pose": "ringing a small handbell, an AED case at the feet, welcoming smile" },
+    { "id": "09", "caption": "加油",     "pose": "shouting into a yellow megaphone, other fist punched up" },
+    { "id": "10", "caption": "棒棒哒",   "pose": "both arms thrown up in celebration, eyes squeezed happy, stars bursting around" },
+    { "id": "11", "caption": "点赞",     "pose": "big thumbs up, winking, sparkle at the thumb" },
+    { "id": "12", "caption": "比心",     "pose": "making a heart shape with both hands in front of the chest, small floating hearts" },
+    { "id": "13", "caption": "谢谢",     "pose": "bowing politely with both hands clasped together, eyes closed, gentle smile" },
+    { "id": "14", "caption": "辛苦了",   "pose": "holding out a steaming cup of tea with both hands, warm caring smile" },
+    { "id": "15", "caption": "救命啊",   "pose": "comically panicking, both hands on the cheeks, mouth wide open, cartoon sweat drops" },
+    { "id": "16", "caption": "生日快乐", "pose": "holding a small birthday cake with one lit candle, delighted face" }
+  ]
+}
