@@ -138,3 +138,79 @@ no GitHub connection step. First deploy went live in about ten seconds, and
 Watch the response shape when polling: `/deploys` returns a **list of
 `{deploy: {...}, cursor}` wrappers**, not a list of deploys. Indexing straight to
 `[0]['status']` silently yields nothing and looks like a stuck deploy.
+
+---
+
+## 2026-08-04 — transparency, 24 stickers, and a second language
+
+### Typesetting in code makes translation free
+
+**CONFIRMED.** A complete 24-sticker English set cost **zero** image or video
+generation. Because captions are drawn by Pillow rather than the image model, the
+same 24 animations were recomposited with `caption_en` and a Latin face. A third
+language is one dictionary entry per sticker plus a re-run.
+
+This is the compounding payoff of the earlier "model paints, code typesets" rule:
+it started as a correctness fix for mangled Chinese glyphs, and it turned out to
+be what makes the pack localisable at all.
+
+Font pairing that holds the same weight across scripts: Hiragino Sans GB **W6**
+for Chinese, **Arial Black** for English. Both carry the three-pass treatment
+(black stroke, white halo, black fill) without going muddy at 240px.
+
+### Transparency is the difference between a sticker and a white box
+
+**CONFIRMED.** Published WeChat packs are transparent; they sit directly on the
+chat background. An opaque sticker shows as a white rectangle on WeChat's grey
+(#EDEDED) and reads instantly as amateur. This was the largest visual gap against
+the reference pack and was not something the size or caption work could hide.
+
+The keying technique that works on flat cel art with a die-cut border:
+
+1. Flood-fill from the borders. This reaches the background **and** the model's
+   own white die-cut border, because they are the same white and touch.
+2. Enclosed white is never reached — eye highlights, and critically the caption's
+   white halo inside its black keyline — so those stay opaque, which is what keeps
+   the caption legible on any background.
+3. Dilate what remains (3 × MaxFilter(7)) to rebuild the die-cut rim at a uniform
+   width. The visible edge is then **white meeting transparent**, so there is no
+   dark fringe when composited onto a coloured background.
+
+Step 3 is the one that matters. Keying white directly to transparent leaves the
+black outline anti-aliased against white, and every sticker gets a pale halo.
+
+Cost: transparency plus `disposal=2` weakens inter-frame compression, so the pack
+settled at 8–13 frames and 64–80 colours instead of 13–15 frames and 80–96. Worth
+it — a white box is a worse defect than a slightly lower frame rate.
+
+### PIL's ImageSequence.Iterator silently destroys the info you are about to check
+
+**CONFIRMED, and it cost a full false alarm.** This verifier reported all 48
+stickers as opaque:
+
+```python
+im = Image.open(path)
+frames = sum(1 for _ in ImageSequence.Iterator(im))   # seeks to the LAST frame
+transparent = im.info.get("transparency") is not None  # reads the last frame's info
+```
+
+Iterating **mutates** `im` by seeking, and the final frame's `info` dict does not
+carry the `transparency` key. Every sticker was in fact transparent. Read `size`,
+`loop` and `transparency` off frame 0 *before* iterating, or re-open the file.
+
+*Rule: in PIL, treat any multi-frame image as stateful. Harvest metadata first,
+iterate second.*
+
+### Compare byte counts, not rounded kilobytes
+
+**MEASURED.** The gate is 100,000 bytes. The largest English GIF is 99,950 bytes —
+which `round(n/1000, 1)` renders as `100.0KB`, indistinguishable from a violation.
+The check now compares raw bytes and only the display rounds.
+
+### Extract only the frames the ladder can use
+
+**MEASURED.** Frames were being extracted at the source 24fps, but the encode
+ladder never selects more than half of them. Extracting at 12fps up front halved
+the per-frame flood-fill cost, taking a 24-sticker build from ~12 minutes to ~6,
+and — because the stride arithmetic changed — several stickers landed on *more*
+colours than before at the same file size.
