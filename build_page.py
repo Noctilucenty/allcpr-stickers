@@ -99,8 +99,16 @@ HTML = f"""<title>ALLCPR 安安 · 微信表情包</title>
   .lede {{ margin:26px 0 0; max-width:62ch; color:var(--muted); }}
   .lede strong {{ color:var(--ink); font-weight:600; }}
 
+  .callout {{
+    margin:26px 0 0; padding:18px 22px; border-radius:14px;
+    background:var(--wash); border:1px solid var(--line); border-left:4px solid var(--blue);
+  }}
+  .callout h3 {{ margin:0 0 6px; font-size:16px; font-weight:800; }}
+  .callout p {{ margin:0; font-size:15px; color:var(--muted); max-width:62ch; }}
+  .callout a {{ color:var(--blue-ink); font-weight:600; }}
+
   .grab {{
-    margin:26px 0 0; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    margin:22px 0 0; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
     padding:18px 20px; background:var(--wash); border:1px solid var(--line);
     border-radius:14px;
   }}
@@ -184,13 +192,21 @@ HTML = f"""<title>ALLCPR 安安 · 微信表情包</title>
   这套表情是给 ALLCPR 的同事和学员在微信群里用的：<strong>收到、加油、辛苦了</strong>，
   还有几个只有学过急救的人才用得上的——<strong>快打911、用力按压、别慌</strong>。</p>
 
+  <div class="callout">
+    <h3>为什么不能一键添加整套？</h3>
+    <p>微信只允许从它自己的表情商店一键添加整套表情，网页和文件都不行。要做到那一步，
+    这套表情得先投稿到微信表情开放平台并通过审核。在那之前，用下面的办法自己加，
+    一张十几秒，全部加完两分钟。<br>
+    要发给同事，用这个公开页面：<a href="https://allcpr-stickers.onrender.com">allcpr-stickers.onrender.com</a></p>
+  </div>
+
   <div class="grab">
     <a class="btn" id="zip" download="ALLCPR_安安_微信表情包.zip">下载全部 16 枚</a>
     <p>ZIP 压缩包，约 {zip_kb} KB。也可以在下面单张保存。</p>
   </div>
 
   <h2>怎么加到自己的表情栏</h2>
-  <p class="note">微信不能直接从网页装表情包，得先把图片存下来，再从聊天里添加。两分钟的事。</p>
+  <p class="note">先把图片存下来，再从聊天里添加。</p>
 
   <div class="tracks">
     <div class="track">

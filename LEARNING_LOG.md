@@ -100,3 +100,41 @@ An earlier ladder that cut colours first bottomed out at 32 colours and lossy=20
 for the same file size — same budget, visibly worse art.
 
 *Rule: at a fixed byte budget, spend on colours and starve the frame rate.*
+
+---
+
+## 2026-08-04 — publishing
+
+### WeChat has no bulk sticker install, full stop
+
+**SOURCED + CONFIRMED.** There is no import format for WeChat sticker packs — no
+zip, no manifest, no deep link that installs a set into the sticker tray. One-tap
+"添加" exists only for packs published in WeChat's own 表情商店 via the
+表情开放平台. Telegram and LINE both have import flows; WeChat does not. So
+"make it auto-add everything" is not an engineering problem, it is a submission
+and review problem, and the honest answer is to say so rather than build a
+convincing-looking installer that cannot work.
+
+The manual route, which is what a download page can actually enable:
+save image → send to 文件传输助手 → long-press → 添加到表情.
+
+### Render re-encodes PNGs it serves
+
+**MEASURED.** `site/assets/qr.png` is 734 bytes in git; the same file fetched from
+`allcpr-stickers.onrender.com` is 684 bytes with a different md5. Decoding both and
+diffing showed **zero pixel difference** across all 369×369 pixels — Render strips
+PNG metadata on serve.
+
+*Rule: never verify a deployed image asset by byte or hash comparison. Decode both
+and diff the pixels, or you will chase a phantom corruption.*
+
+### Deploying a static site from the API needs no OAuth for a public repo
+
+**CONFIRMED.** `POST /v1/services` with `type: static_site`, an `ownerId`, a public
+GitHub repo URL, and `serviceDetails.publishPath` creates and deploys the site with
+no GitHub connection step. First deploy went live in about ten seconds, and
+`autoDeploy: yes` picks up every subsequent push to `master`.
+
+Watch the response shape when polling: `/deploys` returns a **list of
+`{deploy: {...}, cursor}` wrappers**, not a list of deploys. Indexing straight to
+`[0]['status']` silently yields nothing and looks like a stuck deploy.
